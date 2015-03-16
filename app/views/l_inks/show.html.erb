@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @l_ink.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @l_ink.url %>
+</p>
+
+<%= link_to 'Edit', edit_l_ink_path(@l_ink) %> |
+<%= link_to 'Back', l_inks_path %>

@@ -1,0 +1,27 @@
+<h1>Listing l_inks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @l_inks.each do |l_ink| %>
+      <tr>
+        <td><%= l_ink.title %></td>
+        <td><%= l_ink.url %></td>
+        <td><%= link_to 'Show', l_ink %></td>
+        <td><%= link_to 'Edit', edit_l_ink_path(l_ink) %></td>
+        <td><%= link_to 'Destroy', l_ink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New L ink', new_l_ink_path %>
